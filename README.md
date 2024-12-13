@@ -1,3 +1,13 @@
+Following the course at [Elixir School - Mix Tasks](https://elixirschool.com/en/lessons/intermediate/mix-tasks)
+
+# CLI commands
+## Start an elixir project
+```bash
+mix new hello
+cd hello
+```
+
+
 # Hello
 
 **TODO: Add description**
