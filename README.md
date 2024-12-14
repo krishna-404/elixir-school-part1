@@ -73,6 +73,12 @@ Example.explode_run
 Example.explode_monitor
 ```
 
+## Using Tasks for async operations
+```iex
+task = Task.async(Example, :double, [2000])
+Task.await(task)
+```
+
 # Hello
 
 **TODO: Add description**

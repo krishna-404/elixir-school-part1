@@ -37,4 +37,9 @@ defmodule Example do
       {:DOWN, _ref, :process, _pid, reason} -> IO.puts("Exit reason: #{reason}")
     end
   end
+
+  def double(x) do
+    :timer.sleep(2000)
+    x * 2
+  end
 end
