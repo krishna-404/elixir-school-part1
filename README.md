@@ -7,6 +7,27 @@ mix new hello
 cd hello
 ```
 
+### Raising an error
+```iex
+raise "An error occurred"
+```
+** (RuntimeError) Oh no!
+
+```iex
+raise ArgumentError, message: "the argument value is invalid"
+```
+** (ArgumentError) the argument value is invalid
+
+## Check Example module result to get time taken by a function to execute / run
+```bash
+iex -S mix
+```
+
+```iex
+recompile
+Example.timed(fn -> 1 + 1 end, [100])
+```
+
 
 # Hello
 
