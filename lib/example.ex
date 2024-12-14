@@ -17,4 +17,24 @@ defmodule Example do
 
     listen()
   end
+
+  def explode, do: exit(:kaboom)
+
+  def explode_run do
+    Process.flag(:trap_exit, true)
+    spawn_link(Example, :explode, [])
+
+    receive do
+      {:EXIT, _pid, :kaboom} -> IO.puts("Exploded with kaboom")
+    {:EXIT, _pid, reason} -> IO.puts("Exploded: #{reason}")
+    end
+  end
+
+  def explode_monitor do
+    spawn_monitor(Example, :explode, [])
+
+    receive do
+      {:DOWN, _ref, :process, _pid, reason} -> IO.puts("Exit reason: #{reason}")
+    end
+  end
 end

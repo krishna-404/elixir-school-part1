@@ -63,6 +63,16 @@ Process.exit(pid, :kill)
 Process.alive?(pid)
 ```
 
+## Trap exit messages
+```iex
+Example.explode_run
+```
+
+## Monitor an exit without trapping
+```iex
+Example.explode_monitor
+```
+
 # Hello
 
 **TODO: Add description**
