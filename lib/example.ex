@@ -4,4 +4,8 @@ defmodule Example do
     IO.puts("Time: #{time} μs")
     IO.puts("Result: #{result}")
   end
+
+  def add(a, b) do
+    IO.puts(a + b)
+  end
 end

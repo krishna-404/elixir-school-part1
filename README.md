@@ -28,6 +28,10 @@ recompile
 Example.timed(fn -> 1 + 1 end, [100])
 ```
 
+## Use spawn to run a function in a separate process (To run an async function)
+```iex
+spawn(Example, :add, [1, 2])
+```
 
 # Hello
 
