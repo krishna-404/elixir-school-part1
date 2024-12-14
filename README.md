@@ -79,6 +79,13 @@ task = Task.async(Example, :double, [2000])
 Task.await(task)
 ```
 
+## Using GenServer for stateful operations
+```iex
+SimpleQueue.start_link([1, 2, 3])
+SimpleQueue.dequeue
+SimpleQueue.queue
+```
+
 # Hello
 
 **TODO: Add description**
