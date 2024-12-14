@@ -86,6 +86,12 @@ SimpleQueue.dequeue
 SimpleQueue.queue
 ```
 
+## Using cast to enqueue a value asyncronously & not block current execution
+```iex
+SimpleQueue.enqueue(4)
+SimpleQueue.queue
+```
+
 # Hello
 
 **TODO: Add description**
