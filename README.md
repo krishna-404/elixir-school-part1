@@ -33,6 +33,36 @@ Example.timed(fn -> 1 + 1 end, [100])
 spawn(Example, :add, [1, 2])
 ```
 
+## Listen to messages from a process
+### Start a new process 
+```iex
+spawn(Example, :listen, [])
+```
+or
+```iex
+pid = spawn(fn -> Example.listen() end)
+```
+
+### Send a message to the process
+```iex
+send(pid, {:ok, "hello"})
+```
+
+### Normal process termination
+```iex
+exit(pid, :normal)
+```
+
+### Kill a process (unrecoverable)
+```iex
+Process.exit(pid, :kill)
+```
+
+### Check if a process is alive
+```iex
+Process.alive?(pid)
+```
+
 # Hello
 
 **TODO: Add description**
