@@ -44,6 +44,12 @@ Chat.send_message(:moebi@localhost, "hi")
 Check message received in terminal 3
 Check message received in terminal 1
 
+## Testing distributed code / nodes
+```bash
+iex --sname sophie@localhost -S mix test
+```
+
+
 # Chat
 
 **TODO: Add description**
