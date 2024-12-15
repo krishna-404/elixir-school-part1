@@ -54,6 +54,13 @@ iex --sname sophie@localhost -S mix test
 mix test
 ```
 
+## Custom macro
+```iex
+require OurMacro
+OurMacro.unless true, do: "Hi"
+OurMacro.unless false, do: "Hi"
+```
+
 # Chat
 
 **TODO: Add description**
