@@ -30,6 +30,20 @@ Terminal 2
 Chat.send_message(:alex@localhost, "how are you?")
 ```
 Check message received in terminal 1
+
+## Send message and auto receive replies
+Terminal 3
+```bash
+iex --sname moebi@localhost -S mix
+```
+
+Terminal 1
+```iex
+Chat.send_message(:moebi@localhost, "hi")
+```
+Check message received in terminal 3
+Check message received in terminal 1
+
 # Chat
 
 **TODO: Add description**

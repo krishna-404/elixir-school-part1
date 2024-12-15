@@ -1,19 +1,15 @@
 defmodule Chat do
-  @moduledoc """
-  Documentation for `Chat`.
-  """
+  def receive_message_for_mobi(message, from) do
+    IO.puts message
+    send_message(from, "chicken?")
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Chat.hello()
-      :world
-
-  """
   def receive_message(message) do
     IO.puts("Received message: #{message}")
+  end
+
+  def send_message(:moebi@localhost, message) do
+    spawn_task(__MODULE__, :receive_message_for_mobi, :moebi@localhost, [message, Node.self()])
   end
 
   def send_message(receipent, message) do
