@@ -49,6 +49,10 @@ Check message received in terminal 1
 iex --sname sophie@localhost -S mix test
 ```
 
+## Test based on environment
+```bash
+mix test
+```
 
 # Chat
 

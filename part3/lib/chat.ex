@@ -23,7 +23,7 @@ defmodule Chat do
     |> Task.await()
   end
 
-  def remote_supervisor(recipient) do
-    {Chat.TaskSupervisor, recipient}
+  defp remote_supervisor(recipient) do
+    Application.get_env(:chat, :remote_supervisor).(recipient)
   end
 end
